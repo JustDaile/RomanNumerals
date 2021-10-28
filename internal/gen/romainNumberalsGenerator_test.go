@@ -4,15 +4,15 @@ import (
 	"testing"
 )
 
-// RomanNumberalTest defines a tests input and expected output.
-type RomanNumberalTest struct {
+// RomanNumeralTest defines a tests input and expected output.
+type RomanNumeralTest struct {
 	Input  int
 	Expect string
 }
 
-// RomanNumberalTests return a immutable array of RomanNumberalTests.
-func RomanNumberalTests() []RomanNumberalTest {
-	return []RomanNumberalTest{
+// RomanNumeralTests return a immutable array of RomanNumeralTests.
+func RomanNumeralTests() []RomanNumeralTest {
+	return []RomanNumeralTest{
 		{
 			1,
 			"I",
@@ -66,7 +66,7 @@ func RomanNumberalTests() []RomanNumberalTest {
 			"MLXVI",
 		},
 		// Caveat: Only support numbers between 1 and 3999
-		// Out of range, errors will return empty string as described in the romanNumberalGenerator.go
+		// Out of range, errors will return empty string as described in the romanNumeralGenerator.go
 		{
 			0,
 			"",
@@ -124,11 +124,11 @@ func TestSymbolsByPowerOfTen(t *testing.T) {
 	}
 }
 
-// TestGenerateRomanNumberals will test a bunch of examples to ensure the correct roman numberals are generated.
-func TestGenerateRomanNumberals(t *testing.T) {
-	genImpl := RomanNumberalGeneratorImpl{}
+// TestGenerateRomanNumerals will test a bunch of examples to ensure the correct roman numerals are generated.
+func TestGenerateRomanNumerals(t *testing.T) {
+	genImpl := RomanNumeralGeneratorImpl{}
 
-	for _, test := range RomanNumberalTests() {
+	for _, test := range RomanNumeralTests() {
 		t.Logf("Expect '%v' when calling generate(%v)", test.Expect, test.Input)
 		actual := genImpl.generate(test.Input)
 		if test.Expect != actual {

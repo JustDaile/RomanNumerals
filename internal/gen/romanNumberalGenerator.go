@@ -4,17 +4,17 @@ import (
 	"fmt"
 )
 
-// RomanNumberalGenerator golang version of the interface given in Java
-type RomanNumberalGenerator interface {
+// RomanNumeralGenerator golang version of the interface given in Java
+type RomanNumeralGenerator interface {
 	generate(int) string
 }
 
-// RomanNumberalGeneratorImpl implementation of the RomanNumberalGenerator interface
-type RomanNumberalGeneratorImpl struct{}
+// RomanNumeralGeneratorImpl implementation of the RomanNumeralGenerator interface
+type RomanNumeralGeneratorImpl struct{}
 
-// SymbolsByPowerOfTen returns a roman numberal for a unit given is power of ten.
+// SymbolsByPowerOfTen returns a roman numeral for a unit given is power of ten.
 // Its minumum range is 1 and its maximum range is 3999
-// returns a string containing the roman numberal symbol or an error if out of range.
+// returns a string containing the roman numeral symbol or an error if out of range.
 func SymbolsByPowerOfTen(pow10 int, unit int) (string, error) {
 	if unit < 1 || unit > 9 {
 		return "", fmt.Errorf("unit %v out of range 1-9", unit)
@@ -45,7 +45,7 @@ func SymbolsByPowerOfTen(pow10 int, unit int) (string, error) {
 // I'm sticking with the interface defined in the example, so I will not be returning an error.
 // Alteratively we could panic but this would require the caller attempts a recovery (try recover)
 // The simpliest approach is to return an empty string. However this will not inform the caller of the exact problem.
-func (RomanNumberalGeneratorImpl) generate(input int) string {
+func (RomanNumeralGeneratorImpl) generate(input int) string {
 	// I thought of a few ways to extract each number unit from the input number
 	// - Convert to string/slice of characters and go from their
 	// - Use bitwise operations to exact each one

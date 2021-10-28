@@ -4,11 +4,11 @@ Based on the `Standard Form` table: https://en.wikipedia.org/wiki/Roman_numerals
 
 ## Clone
 
-        git clone https://github.com/JustDaile/RomanNumberals.git
+        git clone https://github.com/JustDaile/RomanNumerals.git
 
 ## Run
 
-        cd RomanNumberals/
+        cd RomanNumerals/
 
         ./test.bat
         # or
